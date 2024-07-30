@@ -1,0 +1,64 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a href="/">Inicio</a>
+    <a href="/about/">Sobre mi</a>
+    <h1>Sobre mi</h1>
+    <h2>... ¡y mi nuevo sitio Astro!</h2>
+
+    <p>
+      Estoy trabajando en el tutorial introductorio de Astro. Esta es la segunda
+      página de mi sitio web, ¡y es la primera que he construido yo mismo!
+    </p>
+
+    <p>
+      Este sitio se irá actualizando a medida que vaya completando más partes
+      del tutorial, ¡así que no dejes de visitarlo para ver cómo va mi viaje!
+    </p>
+  </body>
+</html>
+<style is:global>
+  :root {
+    --accent: 136, 58, 234;
+    --accent-light: 224, 204, 250;
+    --accent-dark: 49, 10, 101;
+    --accent-gradient: linear-gradient(
+      45deg,
+      rgb(var(--accent)),
+      rgb(var(--accent-light)) 30%,
+      white 60%
+    );
+  }
+  html {
+    font-family: system-ui, sans-serif;
+    background: #d0dfd6;
+    background-size: 224px;
+  }
+  code {
+    font-family:
+      Menlo,
+      Monaco,
+      Lucida Console,
+      Liberation Mono,
+      DejaVu Sans Mono,
+      Bitstream Vera Sans Mono,
+      Courier New,
+      monospace;
+  }
+</style>
